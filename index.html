@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vehicle Rental System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Vehicle Rental System</h1>
+
+    <!-- Button to open Add Vehicle Modal -->
+    <button id="addVehicleButton" class="add-vehicle-btn">Add Vehicle</button>
+
+    <!-- Add Vehicle Modal -->
+    <div id="vehicleModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Add New Vehicle</h2>
+            <form id="vehicleForm">
+                <label for="vehicleType">Vehicle Type</label>
+                <select id="vehicleType" required>
+                    <option value="Car">Car</option>
+                    <option value="Bike">Bike</option>
+                </select>
+
+                <label for="vehicleName">Vehicle Name</label>
+                <input type="text" id="vehicleName" required>
+
+                <label for="vehicleId">Vehicle ID</label>
+                <input type="text" id="vehicleId" required>
+
+                <label for="vehicleNumber">Vehicle Number</label>
+                <input type="text" id="vehicleNumber" required>
+
+                <button type="submit">Add Vehicle</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Rental and Return Form -->
+    <form id="rentalForm">
+        <label for="availableVehicles">Select Vehicle to Rent</label>
+        <select id="availableVehicles">
+            <option value="" disabled selected>Select a vehicle to rent</option>
+        </select>
+
+        <label for="rentedVehicles">Select Vehicle to Return</label>
+        <select id="rentedVehicles">
+            <option value="" disabled selected>Select a vehicle to return</option>
+        </select>
+
+        <button type="submit" id="rentButton" value="rent">Rent/Return</button>
+    </form>
+
+    <!-- Rental History -->
+    <h2>Rental History</h2>
+    <ul id="rentalList"></ul>
+
+    <script src="script.js"></script>
+</body>
+</html>
